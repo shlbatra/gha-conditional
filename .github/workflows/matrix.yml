@@ -7,10 +7,10 @@ jobs:
       matrix:
         node-version: [12, 14, 16]
         operating-system: [ubuntu-latest, windows-latest] 
-        include:   # key value included without combinations
+        include:
           - node-version: 18
             operating-system: ubuntu-latest
-          exclude: # key value exclude from combinations
+          exclude:
           - node-version: 12
             operating-system: windows-latest
     runs-on: $ {{ matrix.operating-system }}
